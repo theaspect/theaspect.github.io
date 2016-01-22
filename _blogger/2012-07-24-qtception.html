@@ -1,0 +1,15 @@
+---
+layout: post
+title: QTception
+date: '2012-07-24T22:28:00.000+07:00'
+author: Constantine Linnick
+tags:
+- боль
+- development
+modified_time: '2014-04-10T15:46:23.615+07:00'
+thumbnail: http://1.bp.blogspot.com/-W2piQs9xRYQ/UA61WhzR4KI/AAAAAAAABek/1h66MYxEXbo/s72-c/Diagram.png
+blogger_id: tag:blogger.com,1999:blog-372595778394672936.post-1231508854170754809
+blogger_orig_url: http://blog.blzr.me/2012/07/qtception.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on">Понадобилось написать десктопный клиент и рассматривали различные варианты написания оного. Хотелось кроссплатформенности и, поэтому, рассматривалась Swing и QT. В качестве варианта QT рассматривался запуск браузера который будет показывать нашу веб-аппликуху. Главным аргументом был высокий скилл в вебе, главным контр-аргументом - полная неясность как из сервера достучаться до клиента пробив все слои абстракции.<br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-W2piQs9xRYQ/UA61WhzR4KI/AAAAAAAABek/1h66MYxEXbo/s1600/Diagram.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="266" src="http://1.bp.blogspot.com/-W2piQs9xRYQ/UA61WhzR4KI/AAAAAAAABek/1h66MYxEXbo/s320/Diagram.png" width="320" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">И эти люди запрещают мне ковыряться в носу</td></tr></tbody></table>А уровней у нас было много: между сервером и браузером находились Vaadin и GWT. И если с первыми тремя элементами было все относительно просто и понятно: по классу на виджет и обертку, то как пронзить песочницу в обе стороны было неизвестно даже возможно ли такое впринципе.<br /><br />Быстро <a href="http://doc.qt.nokia.com/4.7-snapshot/qtwebkit-bridge.html">выяснилось</a>, что можно расширить объектную модель движка плюсовыми классами и вызывать методы внутри JavaScript из приложения. В обратную сторону можно добавить javascript обработчики событий. Обработчики успешно выводили алерты, но вызвать нативный метод из браузера после сигнала с сервера никак не удавалось.<br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://i.qkme.me/355u2u.jpg" imageanchor="1" style="clear: right; float: right; margin-bottom: 1em; margin-left: 1em;"><img border="0" height="244" src="http://i.qkme.me/355u2u.jpg" width="320" /></a></div>После уютного мира жабы пасть до нативного кода оказалось мучительно больно. На второй день получилось запустить отладчик, который ничем не помог: приложение все так же падало с неизвестной ошибкой, либо вообще ничего не происходило. Единственное что было доступно - логи в консоли и алерты в браузере.<br /><br />К концу третьего дня, когда отчаяние достигло максимума, созерцая обфусцированный gwt-шный javascript, заметил отсутствие ";".</div>

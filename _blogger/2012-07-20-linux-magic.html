@@ -1,0 +1,14 @@
+---
+layout: post
+title: Linux magic
+date: '2012-07-20T22:32:00.000+07:00'
+author: Constantine Linnick
+tags:
+- боль
+- open source
+modified_time: '2013-03-27T01:03:33.114+07:00'
+blogger_id: tag:blogger.com,1999:blog-372595778394672936.post-1373394269539327718
+blogger_orig_url: http://blog.blzr.me/2012/07/linux-magic.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on"><div class="separator" style="clear: both; text-align: center;"><object class="BLOGGER-youtube-video" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" data-thumbnail-src="http://1.gvt0.com/vi/GVO8RU9h88k/0.jpg" height="266" width="320"><param name="movie" value="http://www.youtube.com/v/GVO8RU9h88k&fs=1&source=uds" /><param name="bgcolor" value="#FFFFFF" /><param name="allowFullScreen" value="true" /><embed width="320" height="266"  src="http://www.youtube.com/v/GVO8RU9h88k&fs=1&source=uds" type="application/x-shockwave-flash" allowfullscreen="true"></embed></object></div>В каждой шутке есть доля шутки. Дистрибутив собирается из огромного числа разрозненных компонентов, и отсутствуют официальные рекомендации, разве что <a href="http://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard">FHS</a>, которой восемь лет и которая описывает результат <a href="http://www.osnews.com/story/25556">неконтролируемой</a> эволюции. И расположение конфига зависит от того, с какой ноги встал разработчик или майнтейнер.<br /><br /><a name='more'></a>Я уже привык к конфигурационным файлам, которые могут лежать в /etc, /etc/default, /etc/whatever. В человеческом конфигурационном имеется умолчательная конфигурация и закомментированные параметры с описанием что они делают. Но убунтовцы пошли дальше: во втором десятилетии XXI века они почему-то решили, что могут быть ноутбуки без аппаратной поддержки гибернации. После обновления до 12.04 пользователи <a href="https://bugs.launchpad.net/ayatana-design/+bug/882040">сильно удивились</a> отсутствующей возможности гибернации.<br /><br />Но самое эпичное было в том, <a href="http://askubuntu.com/questions/94754/how-to-enable-hibernation-in-12-04">как гибернация включалась</a>. Всего-то надо произнести заклинание где-то в темных глубинах конфигурационной директории. Это можно было бы простить, если бы файлик там был у нужно было просто раскомментить, но требовать создания файла с политиками - это надо очень не любить пользователей.<br /><br />Еще один подобный прикол - это файл с динамическими обоями. Для того, чтобы обои менялись не достаточно выделить папку с картинками и сказать хочу. Нужно создать XML файлик в котором описать сценарий для смены картинок, примерно <a href="https://gitorious.org/opensuse/art/blobs/17085c562a98f278d30816b003ada1a0ac51e17c/12.2/gnome/dynamic-wallpaper.xml.in">вот так</a>.</div>

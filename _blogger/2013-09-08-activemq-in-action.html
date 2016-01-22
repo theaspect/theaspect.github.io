@@ -1,0 +1,14 @@
+---
+layout: post
+title: ActiveMQ in Action
+date: '2013-09-08T19:08:00.000+07:00'
+author: Constantine Linnick
+tags:
+- книги
+- message queue
+modified_time: '2013-10-12T04:42:11.659+07:00'
+blogger_id: tag:blogger.com,1999:blog-372595778394672936.post-3528327693983978678
+blogger_orig_url: http://blog.blzr.me/2013/09/activemq-in-action.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on"><div class="separator" style="clear: both; text-align: center;"><a href="http://www.addison-wesley.de/media_local/shop_u1bigs/9781933988948.jpg" imageanchor="1" style="clear: right; float: right; margin-bottom: 1em; margin-left: 1em;"><img border="0" height="320" src="http://www.addison-wesley.de/media_local/shop_u1bigs/9781933988948.jpg" width="255" /></a></div>Отличный справочник по технологии для которой очень небогато литературы (всего 3 <a href="http://activemq.apache.org/books.html">книги</a>). Книга разбита на 4 части: введение в JMS вообще и конкретную реализацию ActiveMQ в частности, Конфигурация, Использование, Продвинутые фичи.<br /><br /><a name='more'></a><br /><br />Какие-то детали и находки здесь приводить не имеет смысла, поскольку они очень узкоспециальные, хочу лишь отметить интересное наблюдение. Технология проста как две копейки: прочитать <a href="http://activemq.apache.org/how-should-i-implement-request-response-with-jms.html">короткую</a> статью и начать использовать. Мы реализовали RMI поверх AMQ, в процессе реального использования накрутили кучу кода, которая вполне успешно работала на наших масшатбах. Когда же я начал читать книгу, нашел по крайней мере десяток велосипедов, для которых имелась стандартная реализация, более того: некоторые вещи вообще были не нужны, поскольку реализованы из коробки.<br /><br />Итог: тем, кто использует ActiveMQ, выбирает реализацию брокера для JMS, или просто интересуется обменом сообщениями в разнородных системах стоит прочитать хотя бы первый раздел - там рассказано что зачем и куда не сильно завязываясь на конкретную реализацию.</div>

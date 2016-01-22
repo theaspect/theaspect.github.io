@@ -1,0 +1,15 @@
+---
+layout: post
+title: Bleeding Edge
+date: '2013-06-09T19:58:00.000+07:00'
+author: Constantine Linnick
+tags:
+- боль
+- development
+modified_time: '2014-04-10T15:47:19.701+07:00'
+thumbnail: http://1.bp.blogspot.com/-h_djhL1jGho/UbR4D1mgzHI/AAAAAAAAB7o/0NcLyRg1eGE/s72-c/WsSklyG.gif
+blogger_id: tag:blogger.com,1999:blog-372595778394672936.post-7266478706010072450
+blogger_orig_url: http://blog.blzr.me/2013/06/bleeding-edge.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on">Очень интересное ощущение - оказаться на переднем краю (во временных масштабах Java) развития какой-то технологии (JavaFX) после работы со стабильной, читай мертвой (Swing). Стабильный API, JavaDoc, книги, стопицот ответов на StackOverflow в конце концов. Для любой проблемы известно не одно решение, боле того "после двух релизов баг становится фичей", а следовательно ждать исправления нет смысла. Первое что замечаешь - нет JavaDoc, в том, что есть - нет примеров. Второе - есть баги. Тысячи их, а багтрекер почему-то не просто доступен только после регистрации, более того, он <a href="https://www.google.ru/search?hl=ru&amp;q=javafx+site%3Ajavafx-jira.kenai.com">закрыт</a> для индексации. Когда делал что-то на Swing у меня ни разу не было желания засабмитить багрепорт, сейчас - постоянно. Третье - всё самое вкусное и желанное будет в версии next. Восьмерка выйдет весной следующего года, если опять не отложат.<br /><h4 style="text-align: left;">Инкапсуляция говнокода</h4><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="float: right; margin-left: 1em; text-align: right;"><tbody><tr><td style="text-align: center;"><a href="http://thejoysofcode.com/post/44772377027/when-a-small-hack-could-solve-all-my-problems" imageanchor="1" style="clear: right; margin-bottom: 1em; margin-left: auto; margin-right: auto;"><img border="0" src="http://1.bp.blogspot.com/-h_djhL1jGho/UbR4D1mgzHI/AAAAAAAAB7o/0NcLyRg1eGE/s1600/WsSklyG.gif" height="140" width="320" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">When a small hack could solve all my problems</td></tr></tbody></table>Рано или поздно все сталкиваются с нерешаемой красивыми путями проблемой, а чем активнее развитие технологии, тем чаще это случается. У всех, правда, разный порог нерешаемости. Приняв неизбежность, пишем свою обёртку, если код написан с принципом Open-Closed в голове, то перегружаем пару методов, если нет - то копируем всё. После чего исправляем ту самую проблему, пишем обоснование и ссылку на багрепорт. Когда-нибудь это можно будет удалить.<br /><br />Иногда эта проблема такая маленькая и незаметная, что хочется исправить это здесь и сейчас. Почему это зло и затычки нужно прятать в максимально низкоуровневом коде? Потому что эта затычка начинает расползаться по коду, нет централизованной возможности исправить всё оптом, когда появится решение проблемы, а самое страшное - что можно забыть или <a href="http://blog.blzr.me/2013/06/blog-post.html">не знать</a> и опять начать решать уже решенную проблему.</div>

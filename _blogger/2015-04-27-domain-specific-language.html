@@ -1,0 +1,16 @@
+---
+layout: post
+title: Domain Specific Language
+date: '2015-04-27T09:23:00.000+06:00'
+author: Constantine Linnick
+tags:
+- книги
+- работа
+- development
+modified_time: '2015-04-27T09:23:16.470+06:00'
+thumbnail: http://4.bp.blogspot.com/-z8Y_UmZH9HI/VTtRSKLwoAI/AAAAAAAAC00/QVdQ5V-sei4/s72-c/Screenshot%2B2015-04-25%2B11.32.27.png
+blogger_id: tag:blogger.com,1999:blog-372595778394672936.post-8422288954867530010
+blogger_orig_url: http://blog.blzr.me/2015/04/domain-specific-language.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on"><div class="separator" style="clear: both; text-align: center;"><a href="http://martinfowler.com/dsl.jpg" imageanchor="1" style="clear: right; float: right; margin-bottom: 1em; margin-left: 1em;"><img border="0" src="http://martinfowler.com/dsl.jpg" height="320" width="242" /></a></div><a href="http://4.bp.blogspot.com/-z8Y_UmZH9HI/VTtRSKLwoAI/AAAAAAAAC00/QVdQ5V-sei4/s1600/Screenshot%2B2015-04-25%2B11.32.27.png" imageanchor="1" style="clear: right; float: right; margin-bottom: 1em; margin-left: 1em;"><img border="0" src="http://4.bp.blogspot.com/-z8Y_UmZH9HI/VTtRSKLwoAI/AAAAAAAAC00/QVdQ5V-sei4/s1600/Screenshot%2B2015-04-25%2B11.32.27.png" height="251" width="320" /></a>Я уже <a href="http://blog.blzr.me/2015/02/dsl.html">писал</a> про свои эксперименты с DSL, захотелось подтянуть матчасть и прочитать классический труд. Книга на самом деле состоит из двух книг: первая - введение в DSL и обзор различных техник, вторая - типичный список паттернов, в которую Мартин собрал всё что только можно. Первая часть на пять, позволяет структурировать знания, вторую - тупо пролистал по диагонали.<br /><br />Зачем нужен DSL? -<i>&nbsp;... two main ones: improving productivity for developers and improving communication with domain experts. A well- chosen DSL can make it easier to understand a complicated block of code, thus improving the productivity of those working with it. It can also make it easier to communicate with domain experts, by providing a common text that acts as both executable software and a description that domain experts can read to understand how their ideas are represented in a system. This communication with domain experts is a benefit more difficult to achieve, but the resulting gain is much broader because it helps unclog one of the worst bottlenecks in software development—the communication between programmers and their customers.</i><br /><br />Главная идея: разделение на Internal и External DSL, необходимость для DSL Semantic Model, которая строится поверх Domain Model. Картинка которая объясняяет необходимость в DSL: даже скомпилированный код нуждается в движущихся частях, которые и обеспечиваются DSL. Здесь же корень стремлений вынести бизнес-логику в СУБД (<a href="http://blog.blzr.me/2013/04/blog-post_21.html">результат</a> немного предсказуем).<br /><br />Идеальный вариант языки вида Ruby/<a href="http://blog.blzr.me/2014/12/groovy-grails.html">Groovy</a>, которые содержат богатые возможности для написания DSL. В любом случае, DSL очень просто можно реализовать практически где угодно, если архитектура приложения будет достаточно продумана: разделение на статическое API и движущиеся части в виде конфигов.</div>
